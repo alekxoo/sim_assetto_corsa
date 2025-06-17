@@ -237,7 +237,7 @@ class CarVisualizer:
 
 if __name__ == "__main__":
     # Path to your CSV file
-    csv_path = os.path.expanduser("~/Documents/Assetto Corsa/all_car_positions.csv")
+    csv_path = os.path.expanduser("~/Documents/Assetto Corsa/car_position.csv")
     
     # Check if file exists
     if not os.path.exists(csv_path):
