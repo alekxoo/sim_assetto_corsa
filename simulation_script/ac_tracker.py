@@ -73,9 +73,7 @@ class CarVisualizer:
     def project_to_screen(self, car_pos, camera_pos, camera_look, fov):
         """Project 3D car position to 2D screen coordinates"""
         # Calculate vector from camera to car
-        car_height_offset = 0.5  # Start with 1.0, adjust as needed
-        car_visual_center = car_pos + np.array([0, car_height_offset, 0])
-        to_car = car_visual_center - camera_pos  # Use visual center instead of car_pos
+        to_car = car_pos - camera_pos
         
         # Normalize camera look direction
         look_dir = camera_look / np.linalg.norm(camera_look)
